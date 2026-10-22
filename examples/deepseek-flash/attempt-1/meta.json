@@ -1,0 +1,25 @@
+{
+  "model_id": "deepseek-flash",
+  "seat": "api.deepseek.com",
+  "slug": "deepseek-flash",
+  "alias": false,
+  "attempt": 1,
+  "started_at": "2026-10-22T16:57:00.991Z",
+  "ended_at": "2026-10-22T16:57:08.032Z",
+  "http_status": 200,
+  "error": "",
+  "resolved_model": "deepseek-flash",
+  "tools_offered": [
+    "read",
+    "write",
+    "reply"
+  ],
+  "probe": "agentic-read-write-report-v1",
+  "base_url": "https://api.deepseek.com/v1",
+  "turns": 4,
+  "usage": {
+    "prompt": 4823,
+    "completion": 862
+  },
+  "cost_usd": null
+}

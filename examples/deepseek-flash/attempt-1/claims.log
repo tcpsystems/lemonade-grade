@@ -1,0 +1,3 @@
+2026-10-22T16:57:02.244Z tool=read decision=allow result=ok target=probe/inputs/agentic-read-write-report-v1/alpha.txt arg=probe/inputs/agentic-read-write-report-v1/alpha.txt
+2026-10-22T16:57:03.168Z tool=read decision=allow result=ok target=probe/inputs/agentic-read-write-report-v1/beta.txt arg=probe/inputs/agentic-read-write-report-v1/beta.txt
+2026-10-22T16:57:05.676Z tool=write decision=allow result=ok target=probe/markers/deepseek-flash.md arg=probe/markers/deepseek-flash.md

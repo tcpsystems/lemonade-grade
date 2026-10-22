@@ -1,0 +1,28 @@
+{
+  "name": "lemonade-grade",
+  "version": "1.0.0",
+  "description": "An open-source local-AI grading rig: sealed agentic tasks, artifact verification, honest failure classes, and a quality + performance matrix for any OpenAI-compatible local model.",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "selftest": "node agentic-grade.mjs --selftest",
+    "probe": "node lemonade-probe.mjs"
+  },
+  "keywords": [
+    "local-llm",
+    "lemonade",
+    "grading",
+    "agentic",
+    "benchmark",
+    "tool-calling"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcpsystems/lemonade-grade.git"
+  }
+}

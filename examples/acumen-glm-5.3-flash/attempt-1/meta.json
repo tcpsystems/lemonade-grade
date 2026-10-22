@@ -1,0 +1,25 @@
+{
+  "model_id": "glm-5.3-flash",
+  "seat": "ai.tcp.systems",
+  "slug": "acumen-glm-5.3-flash",
+  "alias": false,
+  "attempt": 1,
+  "started_at": "2026-10-22T16:56:47.840Z",
+  "ended_at": "2026-10-22T16:56:49.092Z",
+  "http_status": 502,
+  "error": "http 502: {\"error\":{\"code\":\"all_candidates_failed\",\"message\":\"every eligible provider failed or was skipped\",\"param\":null,\"type\":\"server_error\"}}",
+  "resolved_model": null,
+  "tools_offered": [
+    "read",
+    "write",
+    "reply"
+  ],
+  "probe": "agentic-read-write-report-v1",
+  "base_url": "https://ai.tcp.systems/v1",
+  "turns": 1,
+  "usage": {
+    "prompt": 0,
+    "completion": 0
+  },
+  "cost_usd": null
+}
