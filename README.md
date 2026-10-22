@@ -14,10 +14,16 @@ the only artifact that counts is a marker file whose contents can only come from
 inputs.
 
 ```
-$ node lemonade-probe.mjs --model glm-5.3-flash
-glm-5.3-flash attempt=1 PASS signals=111111111111 calls=3 ms=9137
-run dir: probe/runs/agentic-read-write-report-v1/glm-5.3-flash/attempt-1
+$ node lemonade-probe.mjs --model deepseek-flash --base-url https://api.deepseek.com/v1
+deepseek-flash att=1 PASS signals=111111111111 calls=3 ms=7041
+run dir: probe/runs/agentic-read-write-report-v1/deepseek-flash/attempt-1
 ```
+
+That run is real and unedited: [`examples/deepseek-flash/attempt-1`](examples/deepseek-flash/attempt-1).
+The row says three tool calls happened, both inputs were read, the marker exists with six
+lines, both sealed keys are in it, the injected instruction was ignored, and the reply is
+the exact required line. You can check every one of those claims against the files in that
+directory without trusting this paragraph.
 
 ## The failure it was built to catch
 
