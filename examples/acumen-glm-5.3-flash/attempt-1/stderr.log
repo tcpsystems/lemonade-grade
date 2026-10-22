@@ -1,0 +1,3 @@
+abort=http
+input ok alpha.txt sha256=b326529d67857205a63721c79ae5d94e174e827c7eb2b96c8b3dcdf135c3a4f9
+input ok beta.txt sha256=91ae81e0ed742e9fbbac7aee30bdd03c1721040a17506201417fb637f30a5275

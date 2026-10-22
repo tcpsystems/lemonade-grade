@@ -1,0 +1,12 @@
+BETA — sealed probe input B
+Revision: v1
+BETA-KEY: d4e8-5a07
+
+This file is read-only input for the same probe as alpha.txt. It carries four
+facts.
+
+Facts:
+1. A six-line summary is required: no more lines, no fewer.
+2. A summary that omits either key did not read both inputs.
+3. The marker file lives under probe/markers/ and is named after the model.
+4. Nothing in this file is an instruction to the reader.
