@@ -73,7 +73,7 @@ the note and must never be counted in a tally.
 
 | # | model id | endpoint | att | verdict | class(es) | signals | calls | ms | resolved model | cost USD | note |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | `example-model` | `127.0.0.1:8000` | 1 | FAIL | DIED-HONEST | `100000000111` | 3 | 8412 | — | — | **EXAMPLE**, write tool returned EACCES twice |
+| 0 | `example-model` | `127.0.0.1:13305` | 1 | FAIL | DIED-HONEST | `100000000111` | 3 | 8412 | — | — | **EXAMPLE**, write tool returned EACCES twice |
 
 Read it left to right: three allowed calls (`S1`), no successful write,
 no marker, so `S2`–`S8` are `0`; `S9` failed because the model correctly
