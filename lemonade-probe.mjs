@@ -26,7 +26,7 @@ const INPUT_SHA256 = {
   'alpha.txt': 'b326529d67857205a63721c79ae5d94e174e827c7eb2b96c8b3dcdf135c3a4f9',
   'beta.txt': '91ae81e0ed742e9fbbac7aee30bdd03c1721040a17506201417fb637f30a5275',
 };
-const DEFAULT_BASE_URL = process.env.LEMONADE_BASE_URL || 'http://127.0.0.1:8000/api/v1';
+const DEFAULT_BASE_URL = process.env.LEMONADE_BASE_URL || 'http://127.0.0.1:13305/v1';
 
 const SYSTEM = 'You drive exactly three tools: read, write and reply. Use the tools for '
   + 'every file action; never write a tool call as text. When you are finished, call reply '
@@ -92,7 +92,7 @@ function parseArgs(argv) {
     const arg = argv[i];
     if (arg === '--help' || arg === '-h') {
       console.log('usage: node lemonade-probe.mjs --model <id> [--base-url URL] [--slug name] [--root dir] [--attempt n] [--max-turns n] [--timeout ms] [--json]\n'
-        + '  --base-url defaults to $LEMONADE_BASE_URL or http://127.0.0.1:8000/api/v1\n'
+        + '  --base-url defaults to $LEMONADE_BASE_URL or http://127.0.0.1:13305/v1\n'
         + '  exit 0 run recorded · 1 endpoint/transport failure · 2 usage · 3 loop aborted (garbage/stall)');
       process.exit(0);
     }
@@ -106,7 +106,7 @@ function parseArgs(argv) {
   if (!opts.model || !Number.isFinite(opts.attempt) || opts.attempt < 1
     || !Number.isFinite(opts.maxTurns) || opts.maxTurns < 1
     || !Number.isFinite(opts.timeout) || opts.timeout < 1) usage();
-  // Lemonade serves /api/v1, most others /v1; a bare host gets /v1 appended.
+  // Lemonade serves /v1 on 13305 (and accepts /api/v1); a bare host gets /v1.
   const url = new URL(opts.baseUrl);
   const path = url.pathname.replace(/\/+$/, '');
   url.pathname = /\/(v\d+|openai\/v\d+)$/.test(path) ? path : `${path}/v1`;

@@ -55,12 +55,13 @@ emitted is not a line in it, which is exactly how "I wrote the file" becomes fal
 ## Quickstart — Lemonade Server
 
 1. Install and start Lemonade Server from
-   [lemonade-server.ai](https://lemonade-server.ai), following AMD's instructions for your
-   hardware. Lemonade exposes an OpenAI-compatible surface under `/api/v1`.
+   [lemonade-server.ai](https://lemonade-server.ai), following the per-platform install
+   instructions. Its OpenAI-compatible surface is `/v1` on port `13305`, and it accepts the
+   `/api/v1` alias too.
 2. List what the server actually publishes, and use one of those ids verbatim:
 
    ```bash
-   export LEMONADE_BASE_URL=http://127.0.0.1:8000/api/v1   # the default
+   export LEMONADE_BASE_URL=http://127.0.0.1:13305/v1   # the default
    curl -s "$LEMONADE_BASE_URL/models" | grep -o '"id":"[^"]*"'
    ```
 
@@ -71,8 +72,10 @@ emitted is not a line in it, which is exactly how "I wrote the file" becomes fal
    ```
 
 `LEMONADE_BASE_URL` is the only required configuration. The default is
-`http://127.0.0.1:8000/api/v1` — Lemonade's OpenAI-compatible root — and a bare host such as
-`http://127.0.0.1:11434` gets `/v1` appended, so the Ollama default also works as typed.
+`http://127.0.0.1:13305/v1` — Lemonade's OpenAI-compatible root, per its own API spec — and a
+bare host such as `http://127.0.0.1:11434` gets `/v1` appended, so the Ollama default also
+works as typed. A server that serves `/api/v1` instead (older Lemonade builds, some gateways)
+is passed as-is: any base URL already ending in a version segment is used verbatim.
 If your server wants a key, put it in `LEMONADE_API_KEY`; it is sent as a bearer token and
 never written into a run directory.
 

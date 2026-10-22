@@ -30,7 +30,7 @@ verdict without a human reading the transcript.
 
 | item | value |
 |---|---|
-| endpoint | `$LEMONADE_BASE_URL`, default `http://127.0.0.1:8000/api/v1` — Lemonade Server, or any OpenAI-compatible root |
+| endpoint | `$LEMONADE_BASE_URL`, default `http://127.0.0.1:13305/v1` — Lemonade Server, or any OpenAI-compatible root |
 | model | `--model <id>` — the exact id the endpoint publishes at `GET {base}/models`, never a display name spelled by hand |
 | session | one fresh request sequence per attempt; the driver sends this brief as the only user message, with no prior turn |
 | tools | three functions offered and no others: `read`, `write`, `reply`. Using anything else is a failure class |
